@@ -7,14 +7,16 @@
     <meta property="og:title" content="室内设计作品集 | 徐楷峰" />
     <meta property="og:description" content="从空间概念到 CAD 交付，一份以真实作品和过程说话的室内设计作品集。" />
     <meta property="og:image" content="https://xukf4412-ui.github.io/assets/images/projects/nihao/hero.webp" />
-    <meta name="theme-color" content="#faf9f6" />
+    <meta name="theme-color" content="#191923" />
     <title>室内设计作品集 | 徐楷峰</title>
     <link rel="canonical" href="https://xukf4412-ui.github.io/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260904-1" />
-    <script type="module" src="scripts/site.mjs?v=20260904-1"></script>
+    <link rel="preload" as="image" href="assets/images/cover/portrait-city-1600.webp" media="(max-width: 640px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/images/cover/portrait-city-2560.webp" imagesrcset="assets/images/cover/portrait-city-1600.webp 1600w, assets/images/cover/portrait-city-2560.webp 2560w" imagesizes="100vw" media="(min-width: 641px)" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=20260905-cover" />
+    <script type="module" src="scripts/site.mjs?v=20260905-cover"></script>
   </head>
-  <body>
+  <body class="cover-page">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
 
     <header class="site-header">
@@ -31,38 +33,18 @@
 
     <main id="main-content">
       <section class="story-hero" id="top" data-story-chapter aria-labelledby="hero-title">
-        <div class="hero-stage">
-          <p class="hand-note hero-hello" data-reveal>
-            你好，我是 <strong>徐楷峰</strong>
-            <svg viewBox="0 0 86 42" aria-hidden="true">
-              <path d="M4 5c20 2 36 8 46 18 7 7 13 10 29 12" />
-              <path d="m68 27 11 8-13 3" />
-            </svg>
-          </p>
-
-          <h1 id="hero-title" class="hero-statement">
-            <span data-reveal>我把空间概念</span>
-            <span data-reveal><span class="hero-line-part">和落地细节</span><span class="hero-line-part">放在一起，</span></span>
-            <span data-reveal>让设计从图纸 <em class="marker-word marker-olive" data-marker>走进真实体验</em></span>
-          </h1>
-
-          <aside class="hand-note hero-proof" data-reveal>
-            在你好酒店 2.0 项目中，我参与了
-            <strong>客房、大厅与总图的 CAD 绘制和调整，</strong>
-            累计完成约 10 套较完整图纸。
-            <svg viewBox="0 0 92 52" aria-hidden="true">
-              <path d="M88 6C66 9 49 20 35 37" />
-              <path d="m38 26-3 11 11-2" />
-            </svg>
-          </aside>
-
-          <a class="hero-question hand-note" href="#work" data-reveal>
-            那么，我是怎么把它做成的？
-            <svg viewBox="0 0 44 54" aria-hidden="true">
-              <path d="M11 3c-4 17 0 30 18 40" />
-              <path d="m19 41 10 2-4-10" />
-            </svg>
-          </a>
+        <picture class="cover-art">
+          <source media="(max-width: 640px)" srcset="assets/images/cover/portrait-city-1600.webp" />
+          <img src="assets/images/cover/portrait-city-2560.webp" srcset="assets/images/cover/portrait-city-1600.webp 1600w, assets/images/cover/portrait-city-2560.webp 2560w" sizes="100vw" width="2560" height="1440" alt="徐楷峰坐在暮色城市天台，身旁的屏幕呈现设计软件标识" fetchpriority="high" />
+        </picture>
+        <div class="cover-heading">
+          <p class="cover-name"><strong>徐楷峰</strong><span lang="en">XU KAIFENG</span></p>
+          <h1 id="hero-title">室内设计师</h1>
+          <p class="cover-discipline" lang="en">INTERIOR DESIGNER</p>
+        </div>
+        <div class="cover-footer">
+          <p>让设计从图纸，走进真实体验。</p>
+          <a class="cover-work-link" href="#work">看我的作品 <span aria-hidden="true">↘</span></a>
         </div>
       </section>
 
@@ -70,12 +52,13 @@
         <header class="chapter-heading" data-reveal>
           <p class="hand-note">答案在作品里</p>
           <h2 id="work-title">我是这样做的。</h2>
+          <p class="work-intro">我把空间概念和落地细节放在一起，从酒店标准深化、办公空间，到旧建筑更新，让每个设计判断都有具体的回应。</p>
         </header>
 
         <article class="project-story project-story-feature" data-project-slug="nihao-hotel-2" data-reveal>
           <a class="project-visual" href="nihao-hotel-2.html" tabindex="-1" aria-hidden="true">
             <figure class="image-frame image-frame-landscape" data-drift data-drift-speed="-0.055">
-              <img src="assets/images/projects/nihao/hero.webp" width="2000" height="1042" alt="你好酒店客房多视角空间展示" fetchpriority="high" />
+              <img src="assets/images/projects/nihao/hero.webp" width="2000" height="1042" alt="你好酒店客房多视角空间展示" loading="lazy" />
               <figcaption>你好酒店 2.0 / 标准深化与图纸交付</figcaption>
             </figure>
           </a>
