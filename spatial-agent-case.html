@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>间造 Spatial｜空间设计 Agent 与 Codex 协作实践｜徐楷峰</title>
+  <meta name="description" content="徐楷峰的 AI 应用实践：从空间设计需求出发，借助 Codex 完成需求梳理、交互设计、三维原型和公开发布。查看间造 Spatial 的项目初心、Agent 框架、协作过程与真实成果。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="间造 Spatial｜把空间想法推进为可体验的产品" />
+  <meta property="og:description" content="一个空间设计师与 Codex 协作的完整实践：定义问题、组织交互、验证原型，再把作品交到使用者手中。" />
+  <meta property="og:image" content="https://xukf4412-ui.github.io/assets/images/projects/spatial/overview.webp" />
+  <meta property="og:url" content="https://xukf4412-ui.github.io/spatial-agent-case.html" />
+  <meta name="theme-color" content="#191923" />
+  <link rel="canonical" href="https://xukf4412-ui.github.io/spatial-agent-case.html" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20260905-cover" />
+  <link rel="stylesheet" href="assets/spatial-case.css?v=20260906-case" />
+  <script type="module" src="scripts/site.mjs?v=20260905-cover"></script>
+</head>
+<body class="cover-page spatial-case-page">
+  <a class="skip-link" href="#case-main">跳到项目内容</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="返回首页"><span class="wordmark-glyph" aria-hidden="true">徐</span><span class="sr-only">徐楷峰</span></a>
+    <nav class="site-nav" aria-label="项目导航"><a href="index.html#work">作品</a><a href="#collaboration">AI 工作方式</a><a class="nav-button nav-button-dark" href="index.html#contact">联系</a></nav>
+  </header>
+  <main id="case-main">
+    <section class="spatial-hero spatial-wrap" aria-labelledby="case-title">
+      <p class="spatial-eyebrow">自主探索 / AI × 空间设计 / 2026</p>
+      <h1 id="case-title">间造 <span lang="en">Spatial</span></h1>
+      <p class="spatial-headline">把空间想法，<br />推进为可以体验的产品。</p>
+      <div class="spatial-hero-bottom"><p>从一句“我想做一个空间设计 Agent”出发，<br class="desktop-break" />我与 Codex 协作，把需求、交互与空间表达连接成一个公开网站。</p><div class="spatial-actions"><a class="spatial-button" href="https://xukf4412-ui.github.io/spatial-agent/" target="_blank" rel="noopener">体验空间 Agent <span aria-hidden="true">↗</span></a><a class="spatial-text-link" href="#framework">查看 Agent 框架 <span aria-hidden="true">↓</span></a></div></div>
+      <dl class="spatial-facts"><div><dt>项目性质</dt><dd>自主发起 · 可交互概念原型</dd></div><div><dt>我的职责</dt><dd>产品定义 / 交互设计 / AI 协作</dd></div><div><dt>核心工具</dt><dd>Codex / React / Three.js</dd></div><div><dt>交付结果</dt><dd>公开网站 / 原型 / 文档</dd></div></dl>
+    </section>
+
+    <figure class="spatial-wrap spatial-screen spatial-lead-screen"><img src="assets/images/projects/spatial/overview.webp" width="1600" height="1000" alt="间造 Spatial 真实运行界面：左侧 Agent 引导对话，右侧可交互的庭院空间" fetchpriority="high" /><figcaption><span>真实运行画面 · 光庭 / 初始构想</span><span>概念版由预设规则驱动，尚未接入真实大模型。</span></figcaption></figure>
+
+    <nav class="spatial-wrap spatial-index" aria-label="案例目录"><a href="#origin">项目初心</a><a href="#experience">产品体验</a><a href="#framework">Agent 框架</a><a href="#collaboration">Codex 协作</a><a href="#reflection">成果与复盘</a></nav>
+
+    <section class="spatial-wrap spatial-section spatial-origin" id="origin" aria-labelledby="origin-title">
+      <div><p class="spatial-eyebrow">项目初心</p><h2 id="origin-title">在开始建模之前，<br />能不能先把想法<br />“走一遍”？</h2></div>
+      <div class="spatial-prose"><p>作为空间设计者，我关心的不只是最后一张效果图，更是想法如何被表达、讨论与调整。前期构思往往还很模糊，但要把它变成可感知的空间，已经需要跨越平面、模型和展示工具。</p><p>因此，我提出一个探索方向：让设计者先用对话描述意图，再进入一个可以浏览和调整的空间。适用方向可以从庭院、展览延伸到游戏中的虚拟场景。</p><p>我没有把“支持任意空间”直接当作首版承诺，而是先选择三个可控场景，验证对话、构建、浏览和修改能否连成一条清晰的体验路径。</p><div class="spatial-objective"><strong>这一阶段要验证的事</strong><p>用一个能够实际操作的网站，验证空间设计 Agent 的交互逻辑，并建立后续接入模型的基础。</p></div></div>
+    </section>
+
+    <section class="spatial-principle" aria-label="核心产品判断"><div class="spatial-wrap"><p class="spatial-eyebrow">一次决定产品方向的澄清</p><blockquote>“这个是一个 Agent，<br />沙盒是他的风格，<br /><em>载体是网站。</em>”</blockquote><p class="spatial-principle-note">我在需求沟通中明确了三者的关系：Agent 承担引导，沙盒帮助理解空间，网站让作品可以被直接体验。这个判断决定了界面以对话为入口，而不是先让使用者学习复杂的编辑工具。</p></div></section>
+
+    <section class="spatial-wrap spatial-section" id="experience" aria-labelledby="experience-title">
+      <div class="spatial-section-heading"><div><p class="spatial-eyebrow">产品体验</p><h2 id="experience-title">从一个想法，<br />到一个可比较的方案。</h2></div><p>把空间构思组织成连续的操作，让每一步都有可以看见的反馈。下列画面均来自已上线的网站。</p></div>
+      <ol class="spatial-journey"><li><span>01</span><h3>说出方向</h3><p>通过逐题选项或文字描述，选择空间类型、探索方式与层次需求。</p></li><li><span>02</span><h3>进入空间</h3><p>基于庭院、空间站或展览模板搭建草模，旋转浏览，或切换漫游视角。</p></li><li><span>03</span><h3>继续调整</h3><p>尝试“添加一个房间”等基础指令，也可选中物件调整位置与尺寸。</p></li><li><span>04</span><h3>比较与分享</h3><p>修改保留原方案，通过并排视图比较，再用只读链接分享当前快照。</p></li></ol>
+      <figure class="spatial-screen"><img src="assets/images/projects/spatial/station.webp" width="1600" height="1000" alt="选择未来感空间站后，间造生成包含指挥舱和登陆甲板的预设草模" loading="lazy" /><figcaption><span>远星 / 空间站方向</span><span>概念验证的重点是交互闭环，而非模型生成质量。</span></figcaption></figure>
+      <div class="spatial-feature-pair"><div><p class="spatial-eyebrow">让设计保留选择</p><h3>每次尝试，<br />都有回看的余地。</h3><p>基础指令的修改会创建新方案，手动编辑也保留版本与撤销入口。我把“可以比较和返回”纳入产品要求，让探索过程不必只保留最后一个答案。</p><p>分享链接包含当前场景的只读快照；本机草稿与公开展示各有明确的用途。</p></div><figure class="spatial-screen"><a href="assets/images/projects/spatial/compare.webp" target="_blank" rel="noopener" aria-label="打开完整的方案比较截图"><img src="assets/images/projects/spatial/compare.webp" width="1600" height="1000" alt="庭院与空间站两个方案在同一界面并排比较" loading="lazy" /></a><figcaption>方案比较的真实界面 · 点击查看大图 ↗</figcaption></figure></div>
+    </section>
+
+    <section class="spatial-framework-band" id="framework" aria-labelledby="framework-title"><div class="spatial-wrap spatial-section">
+      <div class="spatial-section-heading"><div><p class="spatial-eyebrow">Agent 框架</p><h2 id="framework-title">让意图、行动与空间，<br />在同一条链路中反馈。</h2></div><p>我用 Agent 的交互思路组织原型。当前以规则与模板验证流程，未来再引入模型理解与工具调用。两者的边界在架构中明确标出。</p></div>
+      <figure class="spatial-framework"><figcaption>当前已实现 / 浏览器内运行</figcaption><ol class="spatial-framework-flow"><li><small>输入层</small><strong>对话与引导选项</strong><p>描述空间方向<br />确定选中对象</p><code>Studio UI</code></li><li><small>执行层</small><strong>规则解析与模板</strong><p>匹配支持的基础指令<br />创建或修改场景</p><code>createScene / modifyScene</code></li><li><small>状态层</small><strong>结构化空间数据</strong><p>校验参数与对象标识<br />记录方案与父版本</p><code>SpaceScene / validateScene</code></li><li><small>表现层</small><strong>三维空间与反馈</strong><p>场景渲染与漫游<br />方案比较与修改反馈</p><code>Three.js / Viewport</code></li></ol><div class="spatial-feedback"><span aria-hidden="true">↶</span><p><strong>使用者查看结果，再提出下一次调整。</strong>手动编辑与对话修改共同作用于场景状态；草稿写入本机，快照通过链接或 JSON 文件分享。</p></div></figure>
+      <div class="spatial-framework-notes"><div><h3>用结构化状态连接对话与空间</h3><p>每个物件记录类型、位置、尺寸、旋转和可见性；方案记录对象集合与父版本关系。界面与渲染读取同一份状态，使调整结果可以保存、校验和回看。</p></div><div><h3>先限定行动，再扩展理解能力</h3><p>当前不会把任意文字当作可执行代码。基础指令通过既定规则转换为场景操作；不支持的修改会给出提示。参数校验限制异常尺寸、重复标识等输入。</p></div></div>
+      <aside class="spatial-future"><p class="spatial-eyebrow">后续规划 / 尚未实现</p><h3>模型理解 → 结构化工具调用 → 校验与执行 → 空间反馈</h3><p>下一阶段可在执行入口前接入真实模型，复用已有场景操作与校验逻辑。代码中已预留 <code>read_space</code> / <code>modify_space</code> 的可选浏览器工具接口，但尚未完成真实模型调用链路验证。云端项目、多用户协作与专业建模导出也不属于当前成果。</p></aside>
+    </div></section>
+
+    <section class="spatial-wrap spatial-section" id="collaboration" aria-labelledby="collaboration-title">
+      <div class="spatial-section-heading"><div><p class="spatial-eyebrow">与 Codex 的协作</p><h2 id="collaboration-title">把设计判断，<br />变成 AI 可以推进的任务。</h2></div><p>这个项目中的 AI 应用，首先发生在开发过程。我的工作是定义要解决的问题、给出约束、判断结果并持续纠偏；Codex 协助完成文档、代码、检查与发布。</p></div>
+      <div class="spatial-worklog">
+        <article><span class="spatial-step-number">01</span><div><h3>让 AI 先帮助我澄清问题</h3><p>我要求采用苏格拉底式提问，每次一个问题并给出编号选项，将开放的想法收敛为问题陈述、方案描述、技术约束、明确不做的事和成功标准。</p></div><div class="spatial-evidence"><small>形成的产出</small><strong>五部分 SPEC</strong><p>把模糊意图转成可以讨论、执行和检查的需求。</p></div></article>
+        <article><span class="spatial-step-number">02</span><div><h3>持续纠正产品理解，而不是只补功能</h3><p>我明确“Agent 是核心、沙盒是风格、网站是载体”，并强调看起来像游戏，实际操作仍围绕设计。Codex 据此把对话引导、三维视图与辅助编辑组织在同一界面。</p></div><div class="spatial-evidence"><small>形成的产出</small><strong>清晰的产品定位</strong><p>界面的视觉语言与真正的使用方式保持一致。</p></div></article>
+        <article><span class="spatial-step-number">03</span><div><h3>用范围取舍推动原型落地</h3><p>在暂时没有模型 API 的情况下，我选择先完成可交互概念版。Codex 用预设规则实现对话与场景操作，优先交付能生成、能修改、能比较的体验路径。</p></div><div class="spatial-evidence"><small>形成的产出</small><strong>可运行的前端原型</strong><p>先验证产品流程，并在界面中说明能力边界。</p></div></article>
+        <article><span class="spatial-step-number">04</span><div><h3>把“能运行”继续推进到“可检查”</h3><p>在协作开发中，Codex 完成类型检查和场景逻辑测试，覆盖模板合法性、定向修改、异常数据、门洞通行与楼梯高度等关键条件。案例配图再从真实网站操作中取得。</p></div><div class="spatial-evidence"><small>形成的产出</small><strong>7 项场景测试通过</strong><p>用具体检查支撑交付，不将它等同于完整的用户测试。</p></div></article>
+        <article><span class="spatial-step-number">05</span><div><h3>用实际访问反馈修正交付方式</h3><p>原托管地址设为公开后，我仍遇到访问拦截，并提供截图反馈。我提出参考个人作品集的发布方式，推动 Codex 将原型独立发布到 GitHub Pages，继续检查匿名访问和资源加载。</p></div><div class="spatial-evidence"><small>形成的产出</small><strong>可以分享的公开网站</strong><p>以真实使用反馈推动修正，完成从本机到线上展示的交付。</p></div></article>
+      </div>
+      <div class="spatial-role-note"><strong>我的贡献与 AI 的贡献</strong><p>我负责问题提出、产品定义、交互方向、范围取舍与体验反馈；Codex 协助完成需求文档、代码实现、调试、验证和发布操作。这是一项 AI 协作开发实践，不将 AI 生成的代码包装为全部手写，也不将概念原型表述为已完成的大模型产品。</p></div>
+    </section>
+
+    <section class="spatial-wrap spatial-section" id="reflection" aria-labelledby="reflection-title">
+      <div class="spatial-section-heading"><div><p class="spatial-eyebrow">成果与复盘</p><h2 id="reflection-title">从“会使用 AI”，<br />到“能组织 AI 完成交付”。</h2></div><p>这个项目的价值，在于把空间设计经验转成产品问题，再通过 AI 协作，把它推进到可以被别人打开、操作和讨论的程度。</p></div>
+      <div class="spatial-results"><div><strong>3<span> 类场景</span></strong><p>庭院、空间站、展览空间，为概念交互提供明确的验证范围。</p></div><div><strong>8<span> 类物件</span></strong><p>房间、墙体、地面、楼梯、平台、方块、立柱与绿植，组成可编辑草模。</p></div><div><strong>7<span> 项测试</span></strong><p>覆盖核心场景逻辑与输入边界，为进一步扩展建立基础。</p></div></div>
+      <div class="spatial-learning"><div><h3>我在这次实践中建立的方法</h3><ul><li><strong>需求结构化：</strong>将愿景转成 SPEC，并用明确的范围避免原型失焦。</li><li><strong>AI 协作表达：</strong>给出上下文、目标与约束，用持续反馈纠正理解偏差。</li><li><strong>Agent 系统思维：</strong>理解意图、工具、状态与反馈之间的关系，而不只关注聊天界面。</li><li><strong>交付意识：</strong>关注真实页面、可回看的方案和实际访问结果，持续推进到公开展示。</li></ul></div><div><h3>我也保留了下一步要回答的问题</h3><p>当前尚未开展系统性的用户研究或效率对比测试，因此不声称已经证明设计效率提升。后续应先观察使用者能否独立完成一次“生成—修改—分享”，再评估模型接入是否带来实际价值。</p><p>接入模型后，还需验证指令理解、工具选择、执行失败恢复与数据存储方案。专业 CAD/BIM 输出、建筑合规验证和游戏引擎资产交付，均超出本次概念验证范围。</p></div></div>
+    </section>
+
+    <section class="spatial-resume-band" aria-labelledby="resume-title"><div class="spatial-wrap spatial-section"><div class="spatial-section-heading"><div><p class="spatial-eyebrow">项目经历</p><h2 id="resume-title">一段可以带走的总结。</h2></div><a class="spatial-text-link" href="assets/spatial-project-experience.md" download>下载项目经历文本 <span aria-hidden="true">↓</span></a></div><div class="spatial-resume"><h3>间造 Spatial｜空间设计 Agent 概念原型</h3><p class="spatial-resume-meta">自主项目 · 产品定义、交互设计与 Codex 协作开发 · 2026</p><ul><li>从空间前期构思与表达需求出发，借助 Codex 通过逐题澄清形成 SPEC，明确产品目标、交互方式和概念版边界。</li><li>设计以 Agent 对话为入口、沙盒为视觉载体的空间构思流程，协同 Codex 实现三类预设场景、三维浏览、基础编辑、方案比较及只读分享。</li><li>将原型组织为输入、执行、场景状态和三维表现四个层次，以规则和模板验证交互流程，为后续模型工具调用预留接口。</li><li>结合实际访问反馈推进调试和发布，将网站部署至 GitHub Pages；核心场景逻辑通过 7 项自动化测试，形成可公开体验的作品。</li></ul><p class="spatial-resume-boundary">当前为预设规则驱动的交互原型，尚未接入真实大模型；代码实现与检查由 Codex 协助完成。</p></div></div></section>
+
+    <section class="spatial-wrap spatial-closing"><p class="spatial-eyebrow">让作品自己说话</p><h2>从这里，进入间造。</h2><div class="spatial-actions"><a class="spatial-button" href="https://xukf4412-ui.github.io/spatial-agent/" target="_blank" rel="noopener">打开可交互原型 <span aria-hidden="true">↗</span></a><a class="spatial-text-link" href="nihao-hotel-2.html">下一个项目：你好酒店 2.0 <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><p>徐楷峰</p><a href="index.html#work">返回全部作品 ↗</a></footer>
+</body>
+</html>

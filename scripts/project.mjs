@@ -186,6 +186,8 @@ if (!project) {
       <a class="text-link" href="index.html#work">返回作品</a>
     </section>
   `;
+} else if (project.caseStudyUrl) {
+  window.location.replace(project.caseStudyUrl);
 } else {
   const supportingMedia = project.mediaSlots.slice(1);
   const processItems = project.process

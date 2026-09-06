@@ -57,6 +57,63 @@ const hotelDrawings = Object.freeze([
 
 export const projects = Object.freeze([
   {
+  "slug": "spatial-agent",
+  "title": "间造 Spatial",
+  "headline": "我用 Codex，把一个空间设计想法推进成可交互的 Agent 原型。",
+  "concept": "用对话引导构思，以沙盒呈现空间，探索 AI 协作开发的完整交付。",
+  "category": "AI 应用实践",
+  "status": "自主项目 · 可交互概念原型",
+  "stage": "产品定义与 Codex 协作开发",
+  "year": "2026",
+  "tags": [
+    "Codex",
+    "Agent 框架",
+    "交互设计",
+    "三维原型"
+  ],
+  "role": "产品定义、交互方向、范围取舍与体验反馈；Codex 协助实现",
+  "summary": "从空间设计需求出发，通过逐题澄清形成 SPEC，与 Codex 协作完成三维原型、基础编辑、方案比较和公开发布。当前采用预设规则驱动，尚未接入真实大模型。",
+  "process": [
+    "澄清问题与产品定义",
+    "交互设计与 Codex 协作实现",
+    "验证体验与公开发布"
+  ],
+  "caseStudyUrl": "spatial-agent-case.html",
+  "image": "assets/images/projects/spatial/overview.webp",
+  "imageWidth": 1600,
+  "imageHeight": 1000,
+  "alt": "间造 Spatial 真实运行界面",
+  "mediaSlots": [
+    {
+      "kind": "hero",
+      "label": "空间设计 Agent",
+      "caption": "引导对话与可交互三维庭院。",
+      "src": "assets/images/projects/spatial/overview.webp",
+      "alt": "Agent 对话与庭院空间",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "kind": "overview",
+      "label": "空间站方向",
+      "caption": "根据预设模板生成空间站草模。",
+      "src": "assets/images/projects/spatial/station.webp",
+      "alt": "空间站草模与生成反馈",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "kind": "delivery",
+      "label": "方案比较",
+      "caption": "两个版本并排比较。",
+      "src": "assets/images/projects/spatial/compare.webp",
+      "alt": "庭院与空间站方案并排比较",
+      "width": 1600,
+      "height": 1000
+    }
+  ]
+},
+  {
     slug: "nihao-hotel-2",
     title: "你好酒店 2.0",
     headline: "我参与把品牌标准，转译成可执行的酒店空间图纸。",
