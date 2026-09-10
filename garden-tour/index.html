@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#272c25"><meta name="description" content="花园户型全景漫游。拖动环视，点击热点或户型图切换客餐厅、卧室与花园阳台。">
+<title>花园之家 · 全景漫游</title>
+<link rel="stylesheet" href="vendor/pannellum.css"><link rel="stylesheet" href="tour.css">
+<script defer src="vendor/pannellum.js"></script><script defer src="rooms.js"></script><script defer src="tour.js"></script>
+</head>
+<body>
+<main id="tour" aria-label="花园之家全景漫游">
+  <div id="panorama" tabindex="0" aria-label="房间全景，拖动或使用方向键环视"></div>
+  <img id="fallback" hidden alt="当前房间全景效果图">
+  <div class="shade" aria-hidden="true"></div>
+  <header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">G</span><div><span class="eyebrow">GARDEN RESIDENCE</span><h1>花园之家</h1></div></div><button id="open-plan" class="pill" aria-haspopup="dialog">▦ <span>户型选房</span></button></header>
+  <section class="room-caption" aria-label="当前房间"><span class="eyebrow" id="room-number">01 / 06</span><h2 id="room-title">客餐厅</h2><p id="room-detail">开放客餐厨 · 花园相伴</p></section>
+  <div id="status" role="status" aria-live="polite">正在载入客餐厅…</div>
+  <div id="error" role="alert" hidden></div>
+  <div class="tools" aria-label="全景控制">
+    <button id="home" aria-label="返回客餐厅" title="返回客餐厅">⌂</button>
+    <button id="zoom-in" aria-label="放大全景" title="放大">＋</button>
+    <button id="zoom-out" aria-label="缩小全景" title="缩小">−</button>
+    <button id="rotate" aria-label="自动环视" aria-pressed="false" title="自动环视">↻</button>
+    <button id="fullscreen" aria-label="进入全屏" title="全屏">⛶</button>
+  </div>
+  <footer class="bottom"><p class="hint">拖动环视 <span>·</span> 点击画面中的房间按钮进入</p><nav id="rooms" aria-label="切换房间"></nav><p class="note">基于户型粗模的 AI 全景概念效果 · 空间与细节以实际设计为准</p></footer>
+</main>
+<dialog id="plan-dialog" aria-labelledby="plan-title"><div class="dialog-head"><div><span class="eyebrow">EXPLORE THE PLAN</span><h2 id="plan-title">选择一个房间</h2></div><button id="close-plan" class="close" aria-label="关闭户型图">×</button></div><div class="plan-wrap"><img src="assets/plan.png" alt="四卧室户型图，右侧为长条景观阳台"><div id="plan-points"></div></div><p class="dialog-note">点击房间名称，直接进入全景。</p></dialog>
+</body></html>

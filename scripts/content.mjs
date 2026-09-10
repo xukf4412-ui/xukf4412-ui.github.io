@@ -114,6 +114,27 @@ export const projects = Object.freeze([
   ]
 },
   {
+    slug: "garden-apartment",
+    title: "花园之家",
+    headline: "我把一张理想户型图，推进成可浏览、可展示的住宅空间模型。",
+    concept: "以家庭公共空间为核心，让客餐厅、卧室与景观阳台沿清晰动线自然连接。",
+    category: "住宅空间",
+    status: "自主项目 · AI 协作设计",
+    stage: "户型建模与沉浸式表达",
+    year: "2026",
+    tags: ["住宅", "SketchUp", "全景漫游", "AI 影像"],
+    role: "户型拆解、空间建模、视觉方向、漫游与视频统筹",
+    summary:
+      "从一张参考户型图出发，我先在 SketchUp 中建立整体尺度和空间关系，再把模型视角转化为客厅效果、房间漫游与介绍视频，形成从平面判断到沉浸式展示的完整表达。",
+    process: ["从参考图拆解功能与动线", "建立 SketchUp 粗模并校准空间关系", "制作效果图、房间漫游与项目视频"],
+    caseStudyUrl: "garden-apartment.html",
+    image: "assets/images/projects/garden/living-room.webp",
+    imageWidth: 1672,
+    imageHeight: 941,
+    alt: "花园之家客厅与景观阳台效果",
+    mediaSlots: [],
+  },
+  {
     slug: "nihao-hotel-2",
     title: "你好酒店 2.0",
     headline: "我参与把品牌标准，转译成可执行的酒店空间图纸。",
