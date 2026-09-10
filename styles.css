@@ -1585,8 +1585,47 @@ a {
   min-height: 44svh;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 40px;
   padding: 5rem var(--page-gutter);
   border-top: 1px solid var(--line);
+}
+
+.case-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-next-project {
+  display: grid;
+  gap: 11px;
+  min-width: min(100%, 290px);
+  padding: 8px 0 14px;
+  border-bottom: 1px solid var(--clay);
+  color: var(--clay);
+}
+
+.case-next-project span {
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.case-next-project strong {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.case-next-project strong span {
+  margin-left: 10px;
+  font-size: 1.15rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .case-next-project:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
 }
 
 .contact-button,
@@ -2172,7 +2211,17 @@ a {
   .case-footer {
     min-height: 36vh;
     min-height: 36svh;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 4rem 20px;
+  }
+
+  .case-footer-actions {
+    flex-wrap: wrap;
+  }
+
+  .case-next-project {
+    width: min(100%, 340px);
   }
 }
 

@@ -1,4 +1,4 @@
-import { getProjectBySlug } from "./content.mjs";
+import { getAdjacentProject, getProjectBySlug } from "./content.mjs";
 
 export function getAdjacentDrawingIndex(currentIndex, total, direction) {
   if (!Number.isInteger(total) || total <= 0) {
@@ -172,6 +172,7 @@ export function initializeDrawingViewer(root, drawings) {
 const main = document.querySelector("#project-main");
 const slug = resolveProjectSlug(window.location.search, document.body?.dataset?.projectSlug);
 const project = getProjectBySlug(slug);
+const nextProject = getAdjacentProject(slug);
 
 if (!main) {
   throw new Error("Project main landmark is missing");
@@ -381,8 +382,14 @@ if (!project) {
       ${drawingDelivery}
 
       <footer class="case-footer">
-        <a class="text-link" href="index.html#work">返回作品</a>
-        <button class="contact-button" type="button" aria-haspopup="dialog" data-contact-open>联系</button>
+        <div class="case-footer-actions">
+          <a class="text-link" href="index.html#work">返回作品</a>
+          <button class="contact-button" type="button" aria-haspopup="dialog" data-contact-open>联系</button>
+        </div>
+        <a class="case-next-project" href="${nextProject?.caseStudyUrl ?? `${nextProject?.slug}.html`}">
+          <span>下一个项目</span>
+          <strong>${nextProject?.title ?? "返回作品列表"} <span aria-hidden="true">→</span></strong>
+        </a>
       </footer>
     </article>
   `;

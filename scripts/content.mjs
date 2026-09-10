@@ -344,3 +344,12 @@ export function getProjectBySlug(slug) {
 
   return projects.find((project) => project.slug === slug);
 }
+
+export function getAdjacentProject(slug) {
+  const currentIndex = projects.findIndex((project) => project.slug === slug);
+  if (currentIndex < 0 || projects.length === 0) {
+    return undefined;
+  }
+
+  return projects[(currentIndex + 1) % projects.length];
+}
